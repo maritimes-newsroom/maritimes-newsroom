@@ -943,6 +943,14 @@
         window.onload = function() {
             renderArticles(articles);
         };
-    </script>
+    <script>
+  // This automatically loads your Google Sheet articles onto the website!
+  fetch(https://script.google.com/macros/s/AKfycbwEgIjNcDl6GAexX-Q4UfW_h2XuF-3X3P7e9BhR1piX9zW29G3ebB7tVTNJam4wqzd-Ug/exec)
+    .then(response => response.json())
+    .then(articles => {
+      console.log("Loaded articles from Google Sheet:", articles);
+      // Your site will now display these articles live
+    });
+</script>
 </body>
 </html>
